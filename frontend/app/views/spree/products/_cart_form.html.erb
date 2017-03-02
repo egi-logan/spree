@@ -8,12 +8,12 @@
             <li>
                                 <% if spree_current_user %>
               <%= radio_button_tag "variant_id", variant.id, index == 0,
-                  'data-price' => variant.price_in(current_currency).money, 
+                  'data-price' => variant.price_in(current_currency).money,
                   'data-in-stock' => variant.can_supply?
               %>
               <% else %>
               <%= radio_button_tag "variant_id", variant.id, index == 0,
-                  'data-price' => "Login for price", 
+                  'data-price' => "Login for price",
                   'data-in-stock' => variant.can_supply?
               %>
               <% end %>
@@ -53,7 +53,6 @@
                   <% else %>
                      Login for prices
                   <% end %>
-              Test here
             </span>
             <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
           </div>
